@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Good Morning Sameera! 💗</title>
+    <style>
+        /* 🌈 Pink Glittery & Magical Canvas Background Style */
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            background: linear-gradient(-45deg, #ff9a9e, #fecfef, #fe9a8b, #fbc2eb);
+            background-size: 400% 400%;
+            animation: glitterBG 12s ease infinite;
+            margin: 0;
+            padding: 30px 15px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            min-height: 100vh;
+            overflow-y: auto;
+            color: #4a1525;
+            user-select: none;
+            -webkit-user-select: none;
+        }
+
+        @keyframes glitterBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* ✨ Magic Sparkles / Glitter Layer Overlay */
+        .sparkle {
+            position: fixed;
+            background: white;
+            border-radius: 50%;
+            pointer-events: none;
+            box-shadow: 0 0 10px #fff, 0 0 20px #ff69b4;
+            animation: floatSparkle 4s linear infinite;
+            z-index: 1;
+        }
+
+        @keyframes floatSparkle {
+            0% { transform: translateY(105vh) scale(0.5); opacity: 0; }
+            50% { opacity: 0.8; }
+            100% { transform: translateY(-10vh) scale(1.2); opacity: 0; }
+        }
+
+        /* 📦 Main Aesthetic Frame Container */
+        .container {
+            max-width: 550px;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.88);
+            border: 3px double #ff69b4;
+            padding: 35px 25px;
+            border-radius: 24px;
+            box-shadow: 0 15px 35px rgba(255, 105, 180, 0.25);
+            backdrop-filter: blur(8px);
+            z-index: 10;
+            position: relative;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            color: #d63384;
+            font-size: 2.2rem;
+            margin-bottom: 15px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+        }
+
+        .intro-text {
+            font-size: 17px;
+            line-height: 1.7;
+            font-weight: bold;
+            color: #5c1d35;
+            margin-bottom: 30px;
+            white-space: pre-line;
+        }
+
+        /* 🎮 Mood Floating Box Interface Grid */
+        .mood-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            min-height: 160px;
+            position: relative;
+            margin-bottom: 20px;
+        }
+
+        .mood-box {
+            padding: 15px 25px;
+            font-size: 16px;
+            font-weight: bold;
+            background: #fff0f5;
+            border: 2px solid #ffb6c1;
+            border-radius: 50px;
+            color: #d63384;
+            cursor: pointer;
+            box-shadow: 0 6px 12px rgba(0,0,0,0.06);
+            transition: all 0.25s ease;
+        }
+
+        .mood-box:not(#badBox):hover {
+            background: #ff69b4;
+            color: white;
+            transform: scale(1.08);
+            box-shadow: 0 8px 15px rgba(255, 105, 180, 0.3);
+        }
+
+        /* 🏃‍♂️ Elusive Running Bad Box Profile */
+        #badBox {
+            background: #ffe4e1;
+            border: 2px solid #f08080;
+            color: #cd5c5c;
+            position: absolute;
+            transition: all 0.15s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            z-index: 15;
+        }
+
+        /* 🏆 Qualification Popup Stage Box */
+        .qualified-section {
+            display: none;
+            border-top: 2px dashed #ffb6c1;
+            padding-top: 25px;
+            margin-top: 20px;
+            animation: fadeIn 0.6s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(15px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .qualified-text {
+            font-size: 18px;
+            font-weight: bold;
+            color: #28a745;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        /* 🎁 Tri-Gift Box Display Structure Layout */
+        .gift-container {
+            display: flex;
+            justify-content: space-around;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .gift-box-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 30%;
+        }
+
+        .gift-box {
+            font-size: 3.5rem;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+            animation: bounceGift 2s infinite alternate;
+        }
+
+        .gift-box:hover {
+            transform: scale(1.2) rotate(5deg);
+        }
+
+        @keyframes bounceGift {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(-8px); }
+        }
+
+        /* 🎟️ Hidden Voucher Display Box Cards */
+        .voucher-card {
+            display: none;
+            margin-top: 15px;
+            background: #fff8dc;
+            border: 2px dashed #ff8c00;
+            padding: 12px 8px;
+            border-radius: 12px;
+            font-size: 14px;
+            font-weight: bold;
+            color: #8b4513;
+            animation: popVoucher 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        @keyframes popVoucher {
+            from { transform: scale(0.6); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Good Morning Sameera! 💗</h1>
+    <div class="intro-text">
+        Here is your little servant today who will guide you through this little journey. Let me know how are you feeling this morning? ✨
+    </div>
+
+    <!-- 🎮 Moving Mood Selections Board -->
+    <div class="mood-grid" id="moodGrid">
+        <button class="mood-box" onclick="selectGoodBox(this, 'Good')">Good 😊</button>
+        <button class="mood-box" onclick="selectGoodBox(this, 'Very Good')">Very Good 🥰</button>
+        <button class="mood-box" onclick="selectGoodBox(this, 'Excellent')">Excellent 🤩</button>
+        <button class="mood-box" id="badBox">Bad 😡</button>
+    </div>
+
+    <!-- 🏆 Stage 2: Qualified Gift Voucher Interface Setup -->
+    <div class="qualified-section" id="qualifiedSection">
+        <div class="qualified-text">
+            Yay! Now you're successfully qualified for the second step! 🎉 Here are few games which you have to play today. Open all the boxes below one-by-one: 👇
+        </div>
+        
+        <div class="gift-container">
+            <!-- Gift 1 -->
+            <div class="gift-box-wrapper">
+                <div class="gift-box" id="gift1" onclick="openGift(1)">🎁</div>
+                <div class="voucher-card" id="voucher1">💥 Oh you won a smiling voucher for a day, you have to smile whole day now! 😊</div>
+            </div>
+            <!-- Gift 2 -->
+            <div class="gift-box-wrapper">
+                <div class="gift-box" id="gift2" onclick="openGift(2)">🎁</div>
+                <div class="voucher-card" id="voucher2">💥 Oh you won a smiling voucher for a day, you have to smile whole day now! 🥰</div>
+            </div>
+            <!-- Gift 3 -->
+            <div class="gift-box-wrapper">
+                <div class="gift-box" id="gift3" onclick="openGift(3)">🎁</div>
+                <div class="voucher-card" id="voucher3">💥 Oh you won a smiling voucher for a day, you have to smile whole day now! 🤩</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    const badBox = document.getElementById('badBox');
+    const moodGrid = document.getElementById('moodGrid');
+    const qualifiedSection = document.getElementById('qualifiedSection');
+    
+    let selectedCount = 0;
+    let clickedBoxes = new Set();
+
+    // 🏃‍♂️ Dodge algorithm logic calculations for the Bad Box
+    function dodgeBadBox() {
+        const gridWidth = moodGrid.clientWidth;
+        const gridHeight = moodGrid.clientHeight;
+
+        // Custom bounds to ensure button keeps rotating within visibility limits
+        const maxX = (gridWidth / 2) - 50;
+        const minX = -(gridWidth / 2) + 50;
+        const maxY = (gridHeight / 2) - 30;
+        const minY = -(gridHeight / 2) + 30;
+
+        const randomX = Math.floor(Math.random() * (maxX - minX + 1)) + minX;
+        const randomY = Math.floor(Math.random() * (maxY - minY + 1)) + minY;
+
+        badBox.style.left = `calc(50% - ${badBox.offsetWidth/2}px + ${randomX}px)`;
+        badBox.style.top = `calc(50% - ${badBox.offsetHeight/2}px + ${randomY}px)`;
+    }
+
+    // Set interactive trigger checks for mobile and desktop systems
+    badBox.addEventListener('mouseenter', dodgeBadBox);
+    badBox.addEventListener('touchstart', (e) => {
+        e.preventDefault();
+        dodgeBadBox();
+    });
+
+    // Reset layout on start positioning center point bounds safely
+    function initializeBadBox() {
+        badBox.style.left = 'calc(50% - ' + (badBox.offsetWidth / 2) + 'px)';
+        badBox.style.top = '110px';
+    }
+    setTimeout(initializeBadBox, 100);
+
+    // 📊 Function mapping safe options track counter limits
+    function selectGoodBox(element, type) {
+        if (clickedBoxes.has(type)) return; // Prevent clicking same box multiple times
+
+        clickedBoxes.add(type);
+        element.style.background = '#ff69b4';
+        element.style.color = 'white';
+        element.style.opacity = '0.6';
+        element.style.pointerEvents = 'none'; // Lock box after select
+        
+        selectedCount++;
+
+        // Open step 2 when any 3 safe options are checked completely
+        if (selectedCount === 3) {
+        
